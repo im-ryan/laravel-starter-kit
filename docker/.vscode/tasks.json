@@ -1,0 +1,97 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dev",
+            "type": "shell",
+            "command": "composer dev"
+        },
+        {
+            "label": "dev:ssr",
+            "type": "shell",
+            "command": "composer dev:ssr"
+        },
+        {
+            "label": "format",
+            "type": "shell",
+            "command": "composer app:format",
+            "group": "build"
+        },
+        {
+            "label": "lint",
+            "type": "shell",
+            "command": "composer app:lint"
+        },
+        {
+            "label": "refactor",
+            "type": "shell",
+            "command": "composer app:refactor"
+        },
+        {
+            "label": "spelling",
+            "type": "shell",
+            "command": "composer app:spelling"
+        },
+        {
+            "label": "test:everything",
+            "type": "shell",
+            "command": "composer test",
+            "group": "test"
+        },
+        {
+            "label": "test:coverage",
+            "type": "shell",
+            "command": "composer test:coverage"
+        },
+        {
+            "label": "test:feature",
+            "type": "shell",
+            "command": "composer test:feature"
+        },
+        {
+            "label": "test:unit",
+            "type": "shell",
+            "command": "composer test:unit"
+        },
+        {
+            "label": "test:arch",
+            "type": "shell",
+            "command": "composer test:arch"
+        },
+        {
+            "label": "ci:list",
+            "type": "shell",
+            "command": "composer ci:list"
+        },
+        {
+            "label": "ci:audit",
+            "type": "shell",
+            "command": "composer ci:audit"
+        },
+        {
+            "label": "ci:outdated",
+            "type": "shell",
+            "command": "composer ci:outdated"
+        },
+        {
+            "label": "ide:support",
+            "type": "shell",
+            "command": "composer util:ide"
+        },
+        {
+            "label": "config:clear",
+            "type": "shell",
+            "command": "php artisan config:clear --ansi --quiet"
+        },
+        {
+            "label": "hooks:update",
+            "type": "shell",
+            "command": "composer util:hooks"
+        },
+        {
+            "label": "deps:patch",
+            "type": "shell",
+            "command": "composer app:patch"
+        }
+    ]
+}

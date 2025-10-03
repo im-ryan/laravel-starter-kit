@@ -1,0 +1,13 @@
+{
+    "disabled": [],
+    "hooks": {
+        "pre-commit": [
+            "composer util:ide",
+            "composer ci:format",
+            "composer ci:lint"
+        ],
+        "pre-push": [
+            "composer ci:list"
+        ]
+    }
+}

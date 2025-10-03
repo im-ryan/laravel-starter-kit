@@ -1,0 +1,20 @@
+{
+    "conventionalCommits.scopes": [
+        "setup",
+        "api",
+        "app",
+        "build",
+        "ci",
+        "db",
+        "feat",
+        "fix",
+        "docs",
+        "tests"
+    ],
+    "editor.formatOnSave": true,
+    "intelephense.environment.phpVersion": "8.4",
+    "npm.packageManager": "pnpm",
+    "php.validate.enable": false,
+    "phpunit.phpunit": "vendor/bin/pest",
+    "task.allowAutomaticTasks": "on"
+}

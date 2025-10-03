@@ -1,0 +1,30 @@
+{
+    "preset": "laravel",
+    "ignore": {
+        "words": [
+            "php",
+            "filesystems",
+            "dockerfile",
+            "supervisord",
+            "roadmap",
+            "eslint",
+            "pnpm",
+            "favicon",
+            "js",
+            "nav",
+            "dropdown",
+            "viewport",
+            "utils",
+            "tooltip",
+            "composables",
+            "ssr",
+            "globals",
+            "tsconfig",
+            "mcp",
+            "whisky",
+            "vscode",
+            "vsc"
+        ],
+        "paths": []
+    }
+}

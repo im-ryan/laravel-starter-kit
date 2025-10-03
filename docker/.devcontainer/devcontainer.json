@@ -1,0 +1,48 @@
+// https://aka.ms/devcontainer.json
+{
+    "name": "Laravel Sail",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "service": "laravel.test",
+    "workspaceFolder": "/var/www/html",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "formulahendry.auto-close-tag",
+                "formulahendry.auto-rename-tag",
+                "saoudrizwan.claude-dev",
+                "damms005.devdb",
+                "mikestead.dotenv",
+                "EditorConfig.EditorConfig",
+                "mhutchie.git-graph",
+                "cjhowe7.laravel-blade",
+                "amiralizadeh9480.laravel-extra-intellisense",
+                "bierner.markdown-preview-github-styles",
+                "christian-kohler.path-intellisense",
+                "xdebug.php-debug",
+                "MehediDracula.php-namespace-resolver",
+                "shufo.vscode-blade-formatter",
+                "vivaxy.vscode-conventional-commits",
+                "bmewburn.vscode-intelephense-client",
+                "laravel.vscode-laravel",
+                "recca0120.vscode-phpunit",
+                "bradlc.vscode-tailwindcss",
+                "jgclark.vscode-todo-highlight",
+                "Vue.volar",
+                "dariofuzinato.vue-peek"
+            ],
+            "recommendations": [
+                "NarasimaPandiyan.jetbrainsmono",
+                "Qvist.jetbrains-new-ui-dark-theme",
+                "BrennonDenny.vsc-jetbrains-icons-enhanced"
+            ],
+            "settings": {}
+        }
+    },
+    "remoteUser": "sail",
+    "postCreateCommand": "(chown -R 1000:1000 /var/www/html 2>/dev/null || true) && sh ./bin/vsc_conf.sh"
+    // "forwardPorts": [],
+    // "runServices": [],
+    // "shutdownAction": "none",
+}
