@@ -93,13 +93,10 @@
         ],
         "app:clear-config": "@php artisan config:clear --ansi --quiet",
         "app:format": [
-            "pint --ansi",
-            "pnpm run format"
+            "pint --dirty --ansi",
+            "sh bin/app/format.sh"
         ],
-        "app:lint": [
-            "phpstan analyse --ansi",
-            "pnpm run lint"
-        ],
+        "app:lint": "sh bin/app/lint.sh",
         "app:patch": [
             "@composer update --with-all-dependencies --patch-only --root-reqs --prefer-dist --prefer-stable --no-interaction --ansi",
             "@composer bump",
@@ -115,12 +112,9 @@
         ],
         "ci:format": [
             "pint --dirty --ansi --bail",
-            "pnpm run format:check"
+            "sh bin/ci/format.sh"
         ],
-        "ci:lint": [
-            "phpstan analyse --ansi --no-progress",
-            "pnpm run lint:check"
-        ],
+        "ci:lint": "sh bin/ci/lint.sh",
         "ci:list": [
             "@ci:format",
             "@ci:refactor",
