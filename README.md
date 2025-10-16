@@ -11,14 +11,13 @@ A production-ready Laravel starter kit with **world-class developer experience**
 
 ---
 
-## ✨ What Makes This Special
+## What Makes This Special
 
-### 🤖 AI-Powered Development
-- **Laravel Boost MCP Server** - Integrated AI coding assistant with browser log monitoring
-- **Cline Integration** - Ready for AI pair programming out of the box
-- Automated AI tooling setup and configuration
+### AI-Powered Development
+- **Laravel Boost MCP Server** - Integrated AI coding assistant with browser log monitoring provided by [Laravel Boost](https://boost.laravel.com/installed)
+  - **Cline supported** out of the box
 
-### 🚀 Modern Full-Stack Architecture  
+### Modern Full-Stack Architecture  
 - **Laravel 12** with PHP 8.4 - Latest framework features
 - **Inertia.js v2** - SPA experience with server-side routing
 - **Vue 3 + TypeScript** - Type-safe reactive frontend
@@ -26,30 +25,27 @@ A production-ready Laravel starter kit with **world-class developer experience**
 - **Laravel Wayfinder** - Type-safe route generation
 - **Spatie Data** - Automated TypeScript type generation
 
-### 🧪 Testing Excellence
-- **100% code coverage** requirement with Pest v4
+### Testing Excellence
+- **100% code coverage** by default required by Pest v4
 - **Parallel test execution** for speed
-- **Architecture tests** to enforce conventions
+- **Architecture tests** to enforce team-approved conventions
 - **Type coverage** enforcement
-- Mutation testing ready for critical logic
+- **Mutation testing** ready for critical logic
 
 ### 🛠️ Developer Experience
-- **One-command everything** - `composer dev`, `composer qa`, `composer test`
+- **Scripts for daily tasks** - `composer ci:list`, `composer qa`, `composer test`, and more!
 - **Automated setup** - `./bin/init.sh` handles the entire project initialization from scratch
-- **Live development** - Server, queue, logs, and Vite in one command
-- **Automated code utilities** - Linting, formatting, refactoring, spell checking, best practices, etc.
-- **Git hooks** - Pre-commit formatting, pre-push quality checks
-- **IDE integration** - Auto-generated helpers and metadata
-- **Dockerized development environment** - Zero project dependencies are required on the host machine *(other than docker)*
+- **Automated code utilities** - Linting, formatting, refactoring, spell checking, best practices, and more!
+- **Git hooks** - Pre-commit formatting and pre-push quality checks with configurable "Definition of Done" check list.
+- **IDE integration** - Auto-generated helpers and metadata provided by [laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
+- **Dockerized development environment** - Zero project dependencies are required on the host machine
 - **Xdebug pre-configured** - Advanced PHP debugging out of the box
 - **Advanced logs** - Logs for Laravel, browser, and Xdebug available in `storage/logs/`
-
-### 🎯 Production-Ready Features
 - **Better Laravel defaults** featuring [Nuno Maduro's essentials package](https://github.com/nunomaduro/essentials)
 - **Feature flags** with Laravel Pennant and frontend integration
-- **Component library** with 15+ accessible UI components (Reka UI)
-- **SSL-enabled development** environment
-- **Real-time debugging** with Telescope
+- **Component library** with 15+ accessible UI components from [Reka UI](https://reka-ui.com/docs/components/checkbox)
+- **SSL-enabled development environment** provided by [ryoluo's sail-ssl](https://github.com/ryoluo/sail-ssl)
+- **Real-time debugging** provided by [Telescope](https://laravel.com/docs/12.x/telescope)
 
 ---
 
@@ -117,7 +113,7 @@ composer util:hooks      # Update git hooks
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## Testing & Quality Assurance
 
 ### Testing Philosophy
 - **100% code coverage** - No exceptions
@@ -144,7 +140,7 @@ composer ci:list
 
 ---
 
-## 🤖 AI-Powered Development
+## AI-Powered Development
 
 This starter kit includes **Laravel Boost**, an MCP server that provides AI assistants (like Cline) with deep Laravel application context:
 
@@ -166,7 +162,7 @@ This starter kit includes **Laravel Boost**, an MCP server that provides AI assi
 
 ---
 
-## 🎨 UI Components
+## UI Components
 
 Pre-built accessible components using **Reka UI**:
 
@@ -183,7 +179,7 @@ All components are:
 
 ---
 
-## 🚢 Production Deployment
+## Production Deployment
 
 ### Environment Setup
 ```bash
@@ -196,6 +192,9 @@ TELESCOPE_ENABLED=false
 ```
 
 ### Build Process
+
+This section is a work-in-progress.
+
 ```bash
 # Install production dependencies
 composer install --no-dev --optimize-autoloader
@@ -209,7 +208,7 @@ composer ci:list
 
 ---
 
-## 🔧 Customization
+## Customization
 
 ### Adding Features
 1. Create feature flag in `config/features.php`
@@ -236,50 +235,36 @@ composer util:ide
 
 ---
 
-## 🗺️ Development Roadmap
+## Development Roadmap
 
 This roadmap outlines planned enhancements to achieve world-class developer experience. Check off items as they're completed!
 
 ### Best Practices
 - [ ] Configure production error monitoring (Sentry integration)
 - [ ] Add custom branded error pages (404, 500, 503)
-- [ ] Document cache layer strategy and implement cache tags
-- [ ] Generate TypeScript types from Eloquent models
-- [ ] Create type-safe form validation schemas
-- [ ] Add cache warming commands for critical data
+- [ ] Automatically generate TypeScript types from API responses
 - [ ] Create architecture decision records (ADRs)
+- [ ] Add rate limiting for authentication endpoints
+- [ ] Write deployment, CI/CD scripts
+- [ ] Configure automated dependency updates (Dependabot/Renovate)
+
+### Developer Experience
+- [ ] Developer Command Center
+  - [ ] Automate Jira ticket transitions
+  - [ ] Automate new branch creation from tickets with a copy of the ticket as a README file
+    - [ ] _Possibly integrate with AI agent to take a first crack at the ticket?_
+  - [ ] Programmtically create a PR with automated Definition of Done checklist included
+- [ ] Install [Histoire](https://histoire.dev/) for Vue component documentation
+- [ ] Create interactive API documentation
+- [ ] Add database diagram auto-generation
+- [ ] Configure conventional commits with commitlint
+- [ ] Add automated changelog generation
 
 ### Testing
 - [ ] Add mutation tests for authentication logic
 - [ ] Create Pest performance tests
-- [ ] Add response time assertions for critical endpoints
 - [ ] Create smoke test suite for critical user flows
-- [ ] Create Dusk E2E tests
 - [ ] Add visual regression testing for key pages
-
-### Developer Experience
-- [ ] Install Histoire for component documentation
-- [ ] Document all UI components with interactive playground
-- [ ] Create custom artisan commands: `make:feature`, `make:vue-component`
-- [ ] Set up GitHub Actions or GitLab CI pipeline
-- [ ] Configure automated dependency updates (Dependabot/Renovate)
-- [ ] Add preview deployments for pull requests
-
-### Production Readiness
-- [ ] Implement query result caching for user data
-- [ ] Add Redis caching for frequently accessed data
-- [ ] Configure application performance monitoring (APM)
-- [ ] Add rate limiting for authentication endpoints
-- [ ] Create performance dashboard and alerting
-
-### Advanced Features
-- [ ] Add contract testing examples
-- [ ] Create integration testing patterns
-- [ ] Add database diagram auto-generation
-- [ ] Configure conventional commits with commitlint
-- [ ] Add automated changelog generation
-- [ ] Create interactive API documentation
-- [ ] Write deployment, CI/CD scripts
 
 ---
 
