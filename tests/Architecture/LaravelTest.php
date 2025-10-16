@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Http\Requests\AuthenticationRequest;
 use App\Providers\TelescopeServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -10,7 +11,10 @@ arch()->preset()->php();
 arch()->preset()->security();
 
 arch()->preset()->laravel()
-    ->ignoring(TelescopeServiceProvider::class);
+    ->ignoring([
+        AuthenticationRequest::class,
+        TelescopeServiceProvider::class,
+    ]);
 
 arch('factories')
     ->expect('Database\Factories')
