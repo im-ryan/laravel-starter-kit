@@ -1,4 +1,4 @@
-# Laravel Modern Starter Kit
+# Laravel Starter Kit
 
 [![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=flat&logo=laravel)](https://laravel.com)
 [![PHP](https://img.shields.io/badge/PHP-8.4-777BB4?style=flat&logo=php)](https://php.net)
@@ -7,49 +7,47 @@
 [![Inertia.js](https://img.shields.io/badge/Inertia.js-2-9553E9?style=flat&logo=inertia)](https://inertiajs.com)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?style=flat&logo=tailwind-css)](https://tailwindcss.com)
 
-A production-ready Laravel starter kit with **world-class developer experience**. Features AI-powered development tools, modern tech stack, comprehensive testing, automated quality assurance, and seamless DevContainer integration.
+A Laravel starter kit with the goal of achieving a **world-class developer experience**. Features AI-powered development tools, modern tech stack, comprehensive testing, automated quality assurance, and a customized development environment controlled by dev containers.
 
 ---
 
 ## What Makes This Special
 
-### AI-Powered Development
-- **Laravel Boost MCP Server** - Integrated AI coding assistant with browser log monitoring provided by [Laravel Boost](https://boost.laravel.com/installed)
-  - **Cline supported** out of the box
-
-### Modern Full-Stack Architecture  
-- **Laravel 12** with PHP 8.4 - Latest framework features
-- **Inertia.js v2** - SPA experience with server-side routing
-- **Vue 3 + TypeScript** - Type-safe reactive frontend
-- **Tailwind CSS v4** - Next-generation utility-first CSS
-- **Laravel Wayfinder** - Type-safe route generation
-- **Spatie Data** - Automated TypeScript type generation
-
-### Testing Excellence
-- **100% code coverage** by default required by Pest v4
-- **Parallel test execution** for speed
-- **Architecture tests** to enforce team-approved conventions
-- **Type coverage** enforcement
-- **Mutation testing** ready for critical logic
-
-### 🛠️ Developer Experience
-- **Scripts for daily tasks** - `composer ci:list`, `composer qa`, `composer test`, and more!
+### Fully Automated Development Environment 
+- **IDE integration** - Auto-generated helpers and metadata provided by [laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
+- **Dockerized development environment** - Zero project dependencies are required on the host machine
+- **Scripts for common tasks** - `composer ci:list`, `composer qa`, `composer test`, and more!
 - **Automated setup** - `./bin/init.sh` handles the entire project initialization from scratch
 - **Automated code utilities** - Linting, formatting, refactoring, spell checking, best practices, and more!
 - **Git hooks** - Pre-commit formatting and pre-push quality checks with configurable "Definition of Done" check list.
-- **IDE integration** - Auto-generated helpers and metadata provided by [laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
-- **Dockerized development environment** - Zero project dependencies are required on the host machine
+- **SSL-enabled development environment** provided by [ryoluo's sail-ssl](https://github.com/ryoluo/sail-ssl)
+
+### AI-Powered Development
+
+- **Laravel Boost MCP Server** - Integrated AI coding assistant with browser log monitoring provided by [Laravel Boost](https://boost.laravel.com/installed)
+  - **Cline supported** out of the box
+
+### Testing Excellence
+
+- **100% code coverage** required by default from Pest v4
+- **Parallel test execution** for speed
+- **Architecture tests** to enforce team-approved conventions
+- **Mutation testing** ready for critical logic
+
+### Developer Experience
+
 - **Xdebug pre-configured** - Advanced PHP debugging out of the box
 - **Advanced logs** - Logs for Laravel, browser, and Xdebug available in `storage/logs/`
 - **Better Laravel defaults** featuring [Nuno Maduro's essentials package](https://github.com/nunomaduro/essentials)
 - **Feature flags** with Laravel Pennant and frontend integration
 - **Component library** with 15+ accessible UI components from [Reka UI](https://reka-ui.com/docs/components/checkbox)
-- **SSL-enabled development environment** provided by [ryoluo's sail-ssl](https://github.com/ryoluo/sail-ssl)
 - **Real-time debugging** provided by [Telescope](https://laravel.com/docs/12.x/telescope)
+- **Laravel Wayfinder** - Type-safe route generation
+- **Spatie Data** - Automated TypeScript type generation
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - [Git](https://git-scm.com)
@@ -77,7 +75,7 @@ chmod +x bin/init.sh
 
 ---
 
-## ⚡ Essential Commands
+## Essential Commands
 
 ### Development Workflow
 ```bash
@@ -91,146 +89,22 @@ composer qa
 
 # Run all tests with 100% coverage requirement
 composer test
-```
 
-### Specialized Commands
-```bash
-# Code quality
-composer app:format      # Format code (PHP + JS/TS)
-composer app:lint        # Lint code for quality issues
-composer app:refactor    # Auto-refactor to modern standards
-composer app:spelling    # Check spelling throughout codebase
-
-# Testing
-composer test:feature    # Feature tests only
-composer test:unit       # Unit tests only  
-composer test:arch       # Architecture tests only
-
-# Utilities
-composer util:ide        # Generate IDE helpers
-composer util:hooks      # Update git hooks
-```
-
----
-
-## Testing & Quality Assurance
-
-### Testing Philosophy
-- **100% code coverage** - No exceptions
-- **Fast feedback** - Parallel execution
-- **Comprehensive** - Unit, feature, and architecture tests
-- **Type safety** - TypeScript coverage enforcement
-
-### Quality Gates
-Every commit automatically:
-1. **Formats** code with Pint and Prettier
-2. **Refactors** PHP code with Rector  
-3. **Lints** for code quality issues
-4. **Checks spelling** across the codebase
-5. **Runs tests** with coverage validation
-
-### CI/CD Ready
-
-Automated development check list for Continuous Integration.
-
-```bash
-# Run all CI checks locally
+# Run all CICD checks to complete the Definition of Done checklist
 composer ci:list
 ```
-
----
-
-## AI-Powered Development
-
-This starter kit includes **Laravel Boost**, an MCP server that provides AI assistants (like Cline) with deep Laravel application context:
-
-### Features
-- **Application introspection** - Routes, models, configuration
-- **Database integration** - Schema and query capabilities  
-- **Log monitoring** - Backend and browser error tracking
-- **Documentation search** - Laravel ecosystem packages
-- **Feature flag awareness** - Current state and management
-
-### Getting Started with AI
-1. Install [Cline](https://cline.bot) in VS Code
-2. The MCP server is automatically configured
-3. Ask questions like:
-   - "Add a new feature flag for X"
-   - "Debug this error in the logs"
-   - "Show me the database schema"
-   - "What routes are available?"
-
----
-
-## UI Components
-
-Pre-built accessible components using **Reka UI**:
-
-- **Navigation** - Sidebar, breadcrumbs, navigation menus
-- **Layout** - Cards, separators, sheets
-- **Forms** - Inputs, labels, checkboxes  
-- **Feedback** - Dialogs, dropdowns, tooltips
-- **Display** - Avatars, buttons, collapsibles
-
-All components are:
-- ✅ **Accessible** - ARIA compliant
-- ✅ **Customizable** - Tailwind CSS styling
-- ✅ **Type-safe** - Full TypeScript support
 
 ---
 
 ## Production Deployment
 
+This section is a work in progress.
+
 ### Environment Setup
 ```bash
-# Production environment
-cp .env.example .env.production
-
 # Set production values
 BOOST_ENABLED=false
 TELESCOPE_ENABLED=false
-```
-
-### Build Process
-
-This section is a work-in-progress.
-
-```bash
-# Install production dependencies
-composer install --no-dev --optimize-autoloader
-
-# Build frontend assets
-pnpm run build
-
-# Run final quality checks
-composer ci:list
-```
-
----
-
-## Customization
-
-### Adding Features
-1. Create feature flag in `config/features.php`
-2. Implement backend logic with flag guards
-3. Add frontend flag checking with `@beacon-hq/beam`
-4. Write comprehensive tests
-
-### Modifying Components
-- UI components: `resources/js/components/ui/`  
-- Application components: `resources/js/components/`
-- Layouts: `resources/js/layouts/`
-
-### Database Changes
-```bash
-# Create migration
-php artisan make:migration create_your_table
-
-# Run migrations
-php artisan migrate
-
-# Generate IDE helpers (for autocomplete)
-composer util:ide
 ```
 
 ---
@@ -268,7 +142,7 @@ This roadmap outlines planned enhancements to achieve world-class developer expe
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. **Quality first** - Run `composer qa` before commits
 2. **Test coverage** - Maintain 100% coverage
@@ -277,7 +151,7 @@ This roadmap outlines planned enhancements to achieve world-class developer expe
 
 ---
 
-## 📚 Documentation & Resources
+## Documentation & Resources
 
 - [**Laravel 12**](https://laravel.com/docs/12.x) - Framework documentation
 - [**Inertia.js v2**](https://inertiajs.com) - SPA integration
